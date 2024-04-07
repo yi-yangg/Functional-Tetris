@@ -1,0 +1,87 @@
+<html>
+  <head>
+    <title>Tetris</title>
+  </head>
+  <body>
+    <h1>Tetris</h1>
+    <main id="main" class="flex row">
+      <div id="sideBar" class="flex col">
+        <div id="controls">
+          <h3>Controls:</h3>
+          <table>
+            <tr>
+              <td>Move</td>
+              <td>
+                <div id="ArrowLeft" class="key">&#8678;</div>
+              </td>
+              <td>
+                <div id="ArrowRight" class="key">&#8680;</div>
+              </td>
+              <td>
+                <div id="ArrowDown" class="key">&#8681; </div>
+              </td>
+            </tr>
+            <tr>
+              <td>Rotate</td>
+              <td>
+                <div id="ArrowUp" class="key">&#8679;</div>
+              </td>
+            </tr>
+          </table>
+          <table>
+            <tr>
+              <td>Drop</td>
+              <td>
+                <div id="space" class="key" style="width:50px">Space</div>
+              </td>
+            </tr>
+            <tr>
+              <td>Hold</td>
+              <td>
+                <div id="hold" class="key" style="width:50px">C</div>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div id="info" class="flex col">
+          <div class="text">
+            <span class="left">Lines: </span>
+            <span class="right" id="lineText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Level: </span>
+            <span class="right" id="levelText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Score: </span>
+            <span class="right" id="scoreText">...</span>
+          </div>
+          <div class="text">
+            <span class="left">Highscore: </span>
+            <span class="right" id="highScoreText">...</span>
+          </div>
+        </div>
+      </div>
+      
+      <svg id="svgCanvas">
+        <!-- game over text box -->
+        <g id="gameOver" visibility="hidden">
+          <rect x="5" y="120" fill="white" height="66" width="190"></rect>
+          <text x="36" y="150">Game Over</text>
+          <text x="10" y="170" font-size="16">Press <tspan fill="red">ENTER</tspan> to restart</text>
+        </g>
+        
+      </svg>
+      
+      <div id="sideBar" class="flex col">
+        <span>Next:</span>
+       
+        <svg id="svgPreview"></svg>
+        <span>Hold:</span>
+        <svg id="svgHold"></svg>
+        
+      </div>
+    </main>
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
